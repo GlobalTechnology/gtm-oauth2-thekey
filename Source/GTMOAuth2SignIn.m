@@ -375,10 +375,13 @@ finishedWithFetcher:(GTMHTTPFetcher *)fetcher
   // "about:blank")
   NSString *requestHost = [requestURL host];
   NSString *requestPath = [requestURL path];
+  NSString *requestScheme = [requestURL scheme];
   BOOL isCallback;
   if (requestHost && requestPath) {
     isCallback = [[redirectURL host] isEqual:[requestURL host]]
                  && [[redirectURL path] isEqual:[requestURL path]];
+  } else if (requestScheme && requestPath) {
+      isCallback = [[redirectURL scheme] isEqual:[requestURL scheme]] && [[redirectURL path] isEqual:[requestURL path]];
   } else if (requestURL) {
     // handle "about:blank"
     isCallback = [redirectURL isEqual:requestURL];

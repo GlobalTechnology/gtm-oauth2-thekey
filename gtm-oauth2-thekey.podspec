@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "gtm-oauth2-thekey"
-  s.version      = "0.0.1"
+  s.version      = "1.0.0"
   s.summary      = "Google OAuth2 Framework modified for TheKey."
   s.homepage     = "https://code.google.com/p/gtm-oauth2/"
   s.license      = { :type => 'Apache License 2.0', :file => 'LICENSE.txt' }
